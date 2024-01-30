@@ -323,3 +323,13 @@ $(document).ready(() => {
     $('.lossDetail').html(`Loss: ${result.loss.toFixed(1)}. <b>${lossMsg}</b>`);
   });
 });
+
+$(document).ready(function(){
+  $('#colorPicker').on('change',function(e){
+    const color=this.value;
+    $('.bgColorChange').css('background',this.value);
+    $('.colorPicherText').html(this.value);
+    console.log($('input.target').val(this.value));
+  });
+  
+});
